@@ -8,7 +8,7 @@ import re
 
 SECRET = 'this_should_not_be_hardcoded_in_real_deployment'
 ##Actual implementation could use .env or similar
-##Only used on line ____ for authentication token
+##Only used on for authentication token
 
 app = Flask(__name__)
 
@@ -17,7 +17,6 @@ app = Flask(__name__)
 db_name = "user_database.db"  # SQLite database file
 
 def init_db():
-    # Connect to SQLite database
     conn = sqlite3.connect(db_name)
     cursor = conn.cursor()
     
@@ -32,7 +31,7 @@ def init_db():
     conn.commit()
     conn.close()
 
-init_db()  # Initialize the database when the app starts
+init_db()  
 
 ####################################################################################
 
